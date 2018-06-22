@@ -1896,14 +1896,6 @@
         <translation>&amp;Cerere plată</translation>
     </message>
     <message>
-        <source>Bech32 addresses (BIP-173) are cheaper to spend from and offer better protection against typos. When unchecked a P2SH wrapped SegWit address will be created, compatible with older wallets.</source>
-        <translation>Adresele de tip Bech32 (BIP-173) sunt mai ieftin de folosit si ofera o protectie mai buna impotriva greselilor de tastare. Daca nu este bifat se creaza o adresa SegWit impachetata in P2SH, compatibila cu portofelele mai vechi.</translation>
-    </message>
-    <message>
-        <source>Generate Bech32 address</source>
-        <translation>Genereaza adresa Bech32</translation>
-    </message>
-    <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
         <translation>Arată cererea selectată (acelaşi lucru ca şi dublu-clic pe o înregistrare)</translation>
     </message>
@@ -2229,6 +2221,10 @@
         <translation>Puteti creste taxa mai tarziu (semnaleaza Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
+        <source>Not signalling Replace-By-Fee, BIP-125.</source>
+        <translation>Nu se semnalizeaza Replace-By-Fee, BIP-125</translation>
+    </message>
+    <message>
         <source>Confirm send coins</source>
         <translation>Confirmă trimiterea monedelor</translation>
     </message>
@@ -2346,6 +2342,10 @@
     <message>
         <source>S&amp;ubtract fee from amount</source>
         <translation>S&amp;cade taxa din suma</translation>
+    </message>
+    <message>
+        <source>Use available balance</source>
+        <translation>Folosește balanța disponibilă</translation>
     </message>
     <message>
         <source>Message:</source>
@@ -2899,6 +2899,10 @@
         <translation>Altele</translation>
     </message>
     <message>
+        <source>Enter address, transaction id, or label to search</source>
+        <translation>Introduceți adresa, ID-ul tranzacției, sau eticheta pentru a căuta</translation>
+    </message>
+    <message>
         <source>Min amount</source>
         <translation>Suma minimă</translation>
     </message>
@@ -3174,12 +3178,24 @@
         <translation>Accepta retransmiterea tranzactiilor primite de la parteneri din whitelist chiar si atunci cand nu se retransmit tranzactii (implicit: %d)</translation>
     </message>
     <message>
+        <source>Add a node to connect to and attempt to keep the connection open (see the `addnode` RPC command help for more info)</source>
+        <translation>Adaugă un nod la care te poţi conecta pentru a menţine conexiunea deschisă (vezi ajutorul de comanda RPC 'addnode' pentru mai multe informatii)</translation>
+    </message>
+    <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Ataşaţi adresei date şi ascultaţi totdeauna pe ea. Folosiţi notaţia [host]:port pentru IPv6</translation>
     </message>
     <message>
         <source>Cannot obtain a lock on data directory %s. %s is probably already running.</source>
         <translation>Nu se poate obține o blocare a directorului de date %s. %s probabil rulează deja.</translation>
+    </message>
+    <message>
+        <source>Cannot provide specific connections and have addrman find outgoing connections at the same.</source>
+        <translation>Nu se pot furniza conexiuni specifice in acelasi timp in care addrman este folosit pentru a gasi conexiuni de iesire.</translation>
+    </message>
+    <message>
+        <source>Connect only to the specified node(s); -connect=0 disables automatic connections (the rules for this peer are the same as for -addnode)</source>
+        <translation>Conectare doar la nodul(rile) specificate; -connect=0 dezactiveaza conexiuni automate (regula pentru aceasta pereche este aceiasi ca pentru -addnode)</translation>
     </message>
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
@@ -3370,6 +3386,10 @@
         <translation>Activeaza inlocuirea tranzactiei in mempool (implicit: %u)</translation>
     </message>
     <message>
+        <source>Error creating %s: You can't create non-HD wallets with this version.</source>
+        <translation>Eroare la crearea %s: Nu se pot crea portofele non-HD cu aceasta versiune.</translation>
+    </message>
+    <message>
         <source>Error initializing block database</source>
         <translation>Eroare la iniţializarea bazei de date de blocuri</translation>
     </message>
@@ -3404,6 +3424,10 @@
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Nu s-a reuşit ascultarea pe orice port. Folosiţi -listen=0 dacă vreţi asta.</translation>
+    </message>
+    <message>
+        <source>Failed to rescan the wallet during initialization</source>
+        <translation>Rescanarea portofelului in timpul initializarii a esuat.</translation>
     </message>
     <message>
         <source>Importing...</source>
@@ -3484,6 +3508,10 @@
     <message>
         <source>Rewinding blocks...</source>
         <translation>Se deruleaza blocurile...</translation>
+    </message>
+    <message>
+        <source>Send transactions with full-RBF opt-in enabled (RPC only, default: %u)</source>
+        <translation>Trimite tranzactii cu optiunea full-RBF activata (doar RPC, implicit: %u)</translation>
     </message>
     <message>
         <source>Set database cache size in megabytes (%d to %d, default: %d)</source>
@@ -3698,6 +3726,14 @@
         <translation>Nu s-a reuşit semnarea tranzacţiei</translation>
     </message>
     <message>
+        <source>Specified -walletdir "%s" does not exist</source>
+        <translation>Nu exista -walletdir "%s" specificat</translation>
+    </message>
+    <message>
+        <source>Specified -walletdir "%s" is a relative path</source>
+        <translation>-walletdir "%s" specificat este o cale relativa</translation>
+    </message>
+    <message>
         <source>The transaction amount is too small to pay the fee</source>
         <translation>Suma tranzactiei este prea mica pentru plata taxei</translation>
     </message>
@@ -3730,6 +3766,10 @@
         <translation>Nu se poate lega la %s pe acest calculator. (Legarea a întors eroarea %s)</translation>
     </message>
     <message>
+        <source>Unable to generate initial keys</source>
+        <translation>Nu s-au putut genera cheile initiale</translation>
+    </message>
+    <message>
         <source>Upgrade wallet to latest format on startup</source>
         <translation>Actualizează portofelul la ultimul format la pornire</translation>
     </message>
@@ -3740,6 +3780,10 @@
     <message>
         <source>Verifying wallet(s)...</source>
         <translation>Se verifică portofelul(ele)...</translation>
+    </message>
+    <message>
+        <source>Wallet %s resides outside wallet directory %s</source>
+        <translation>Portofelul %s se află în afara directorului portofelului %s</translation>
     </message>
     <message>
         <source>Warning</source>
@@ -3832,6 +3876,14 @@
     <message>
         <source>Sets the serialization of raw transaction or block hex returned in non-verbose mode, non-segwit(0) or segwit(1) (default: %d)</source>
         <translation>Stabileste serializarea tranzactiilor brute sau hexul blocurile returnate in mod non-verbose, non-segwit(0) sau segwit(1) (implicit: %d)</translation>
+    </message>
+    <message>
+        <source>Specify directory to hold wallets (default: &lt;datadir&gt;/wallets if it exists, otherwise &lt;datadir&gt;)</source>
+        <translation>Specifica directorul in care vor fi tinute portofelele (implicit:&lt;datadir&gt;/wallets daca exista, alternativ &lt;datadir&gt;)</translation>
+    </message>
+    <message>
+        <source>Specify location of debug log file: this can be an absolute path or a path relative to the data directory (default: %s)</source>
+        <translation>Specifica locatia fisierului de log pentru depanare: aceasta poate fi o cale absoluta sau o cale relativa la directorul de date (implicit: %s)</translation>
     </message>
     <message>
         <source>Support filtering of blocks and transaction with bloom filters (default: %u)</source>
