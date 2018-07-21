@@ -34,6 +34,11 @@
 
 #include <endian.h>
 
+extern void sha256_init(uint32_t *state);
+
+extern void sha256_transform(uint32_t state[8], const uint32_t data[16], int swap);
+
+
 #define _ALIGN(x) __attribute__ ((aligned(x)))
 
 static inline uint32_t swab32(uint32_t v)
